@@ -1,0 +1,32 @@
+header
+  header-container container
+    header-left
+      header-list
+        header-item
+          header-link
+    header-right
+      header-list
+        header-item
+          header-link
+
+nav
+  nav-container container
+    nav-logo
+    nav-list
+      nav-item 
+        nav-link
+    nav-button
+    
+hero
+services
+steps
+wemake
+wetake
+webooking
+steps
+freetime
+reviews
+pricing
+form
+footer
+sidebar
