@@ -26,14 +26,17 @@
 @mixin basic-text
   color: $accent-color
   font-family: $primary-font
+  letter-spacing: -.01em
   font-weight: 600
 
 @mixin description-text
   color: $fade-accent-color
   font-family: $secondary-font
-  line-height: 1.5
   font-weight: 400
   font-size: 20px
+
+  letter-spacing: .01em
+  line-height: 1.5
 
 @mixin sliding-button($first, $second)
   background-color: $second

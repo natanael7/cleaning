@@ -1,5 +1,307 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+@media (max-width: 1345px) {
+  .container {
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.sidelimit {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 1024px) {
+  .sidelimit {
+    padding: 0;
+  }
+}
+
+.button {
+  border-radius: 27px;
+  padding: 18px 35px;
+  font-size: 16px;
+  line-height: 17px;
+}
+.button__base {
+  background-color: #11D665;
+  cursor: pointer;
+  border-radius: 27px;
+  color: #20286F;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.button__base span {
+  z-index: 5;
+  position: relative;
+  transition: all 350ms ease;
+}
+.button__base:hover span {
+  color: #11D665;
+}
+.button__base::after, .button__base::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #20286F;
+  z-index: -1;
+}
+.button__base::before {
+  /*   background: blue; */
+  transform: translateX(-100%);
+  z-index: 1;
+}
+.button__base:hover:before {
+  transform: translateX(0);
+  transition: all 350ms ease;
+}
+.button__base::after {
+  z-index: 0;
+  transform: translateX(100%);
+  transition: none;
+  transition: all 350ms ease;
+}
+.button__base:hover:after {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 350ms 360ms ease;
+}
+.button__base span {
+  color: white;
+}
+.button__base:hover span {
+  color: white;
+}
+.button__invisible {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 27px;
+  color: #20286F;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.button__invisible span {
+  z-index: 5;
+  position: relative;
+  transition: all 350ms ease;
+}
+.button__invisible:hover span {
+  color: white;
+}
+.button__invisible::after, .button__invisible::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #20286F;
+  z-index: -1;
+}
+.button__invisible::before {
+  /*   background: blue; */
+  transform: translateX(-100%);
+  z-index: 1;
+}
+.button__invisible:hover:before {
+  transform: translateX(0);
+  transition: all 350ms ease;
+}
+.button__invisible::after {
+  z-index: 0;
+  transform: translateX(100%);
+  transition: none;
+  transition: all 350ms ease;
+}
+.button__invisible:hover:after {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 350ms 360ms ease;
+}
+.button__transparent {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 27px;
+  color: #11D665;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #11D665;
+  padding: 12px 34px;
+}
+.button__transparent span {
+  z-index: 5;
+  position: relative;
+  transition: all 350ms ease;
+}
+.button__transparent:hover span {
+  color: white;
+}
+.button__transparent::after, .button__transparent::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #11D665;
+  z-index: -1;
+}
+.button__transparent::before {
+  /*   background: blue; */
+  transform: translateX(-100%);
+  z-index: 1;
+}
+.button__transparent:hover:before {
+  transform: translateX(0);
+  transition: all 350ms ease;
+}
+.button__transparent::after {
+  z-index: 0;
+  transform: translateX(100%);
+  transition: none;
+  transition: all 350ms ease;
+}
+.button__transparent:hover:after {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 350ms 360ms ease;
+}
+
+.arrow-white {
+  margin-left: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+.arrow-accent {
+  margin-left: 10px;
+  border: solid #20286F;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.section-title {
+  color: #20286F;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 800;
+  font-size: 1.75rem;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.section-description {
+  color: #445781;
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.subsection-title {
+  color: #20286F;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.subsection-description {
+  color: #445781;
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 0;
+}
+.subsection-label {
+  color: #445781;
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  line-height: 24px;
+  font-size: 0.9375rem;
+  margin-bottom: 15px;
+  display: block;
+  color: #11D665;
+  text-transform: uppercase;
+}
+
+.card {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);
+  border: none;
+  border-radius: 10px;
+}
+.card-title {
+  color: #445781;
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: #20286F;
+}
+.card-description {
+  color: #445781;
+  font-family: "Neue Haas Unica";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  color: #696969;
+  font-size: 15px;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,11 +318,6 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.container {
-  padding-right: 115px;
-  padding-left: 115px;
 }
 
 .header-container {
@@ -40,13 +337,14 @@ a {
 .header-clock__text {
   color: #20286F;
   font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
   font-weight: 600;
 }
 .header-list, .header-link {
   padding-left: 0;
   margin: 0;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   line-height: 40px;
   font-size: 13px;
   letter-spacing: 0.01rem;
@@ -56,6 +354,8 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 .header-right .header-list {
   gap: 2rem;
@@ -63,6 +363,7 @@ a {
 .header-link {
   color: #20286F;
   font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -82,9 +383,21 @@ a {
   filter: invert(10%) sepia(72%) saturate(3684%) hue-rotate(234deg) brightness(87%) contrast(90%);
 }
 
+@media (max-width: 1023px) {
+  .header-link__text, .header-clock__text {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
 .nav {
   color: #20286F;
   font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
   font-weight: 600;
   font-family: "Roboto";
   font-weight: 500;
@@ -105,63 +418,10 @@ a {
   margin-right: 3em;
 }
 .nav-button {
-  background-color: white;
-  cursor: pointer;
-  border-radius: 27px;
-  color: #11D665;
-  position: relative;
-  overflow: hidden;
-  border: solid 1px #11D665;
-  width: 202px;
-  padding: 12px 34px;
+  width: 180px;
   font-size: 17px;
 }
-.nav-button span {
-  z-index: 5;
-  position: relative;
-  transition: all 350ms ease;
-}
-.nav-button:hover span {
-  color: white;
-}
-.nav-button::after, .nav-button::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #11D665;
-  z-index: -1;
-}
-.nav-button::before {
-  /*   background: blue; */
-  transform: translateX(-100%);
-  z-index: 1;
-}
-.nav-button:hover:before {
-  transform: translateX(0);
-  transition: all 350ms ease;
-}
-.nav-button::after {
-  z-index: 0;
-  transform: translateX(100%);
-  transition: none;
-  transition: all 350ms ease;
-}
-.nav-button:hover:after {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 350ms 360ms ease;
-}
 .nav-arrow {
-  margin-left: 10px;
-  border: solid #20286F;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  cursor: pointer;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -173,6 +433,107 @@ a {
   flex-wrap: nowrap;
   align-items: center;
 }
+.nav-burger {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-burger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+    overflow: visible;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: 0 0;
+  }
+  .nav-burger__bar {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 8px;
+    top: 24px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    margin: 0;
+    background-color: #39364e;
+    border-radius: 0;
+  }
+  .nav-burger__bar::before {
+    top: -7px;
+    left: 0;
+    transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    margin: 0;
+    background-color: #39364e;
+    border-radius: 0;
+  }
+  .nav-burger__bar::after {
+    top: -14px;
+    left: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, opacity 0.1s linear;
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    margin: 0;
+    background-color: #39364e;
+    border-radius: 0;
+  }
+  .nav-burger__opened .nav-burger__bar {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 8px;
+    top: 24px;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    margin: 0;
+    background-color: #39364e;
+    border-radius: 0;
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -7px, 0) rotate(-45deg);
+  }
+  .nav-burger__opened .nav-burger__bar::before {
+    top: 0;
+    transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.16s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
+    transform: rotate(-90deg);
+  }
+  .nav-burger__opened .nav-burger__bar::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s linear 0.22s;
+    opacity: 0;
+  }
+}
 
 .hero {
   padding-top: 54px;
@@ -180,9 +541,11 @@ a {
   background-image: url("/img/background/hero.webp");
   background-position: top;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .hero-container {
   display: flex;
+  width: 100%;
 }
 .hero-image {
   margin-right: -145px;
@@ -195,8 +558,9 @@ a {
 .hero-title {
   color: #20286F;
   font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
   font-weight: 600;
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -208,122 +572,17 @@ a {
 .hero-description {
   color: #445781;
   font-family: "Neue Haas Unica";
-  line-height: 1.5;
   font-weight: 400;
   font-size: 20px;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
   margin-top: 38px;
 }
 .hero-button__container {
   margin-top: 38px;
 }
-.hero-button {
-  border-radius: 27px;
-  padding: 18px 35px;
-  font-size: 16px;
-  line-height: 17px;
-}
-.hero-button__base {
-  background-color: #11D665;
-  cursor: pointer;
-  border-radius: 27px;
-  color: #20286F;
-  position: relative;
-  overflow: hidden;
-  border: none;
-}
-.hero-button__base span {
-  z-index: 5;
-  position: relative;
-  transition: all 350ms ease;
-}
-.hero-button__base:hover span {
-  color: #11D665;
-}
-.hero-button__base::after, .hero-button__base::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #20286F;
-  z-index: -1;
-}
-.hero-button__base::before {
-  /*   background: blue; */
-  transform: translateX(-100%);
-  z-index: 1;
-}
-.hero-button__base:hover:before {
-  transform: translateX(0);
-  transition: all 350ms ease;
-}
-.hero-button__base::after {
-  z-index: 0;
-  transform: translateX(100%);
-  transition: none;
-  transition: all 350ms ease;
-}
-.hero-button__base:hover:after {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 350ms 360ms ease;
-}
-.hero-button__base span {
-  color: white;
-}
-.hero-button__base:hover span {
-  color: white;
-}
 .hero-button__invisible {
-  background-color: white;
-  cursor: pointer;
-  border-radius: 27px;
-  color: #20286F;
-  position: relative;
-  overflow: hidden;
-  border: none;
   margin-left: 5px;
-}
-.hero-button__invisible span {
-  z-index: 5;
-  position: relative;
-  transition: all 350ms ease;
-}
-.hero-button__invisible:hover span {
-  color: white;
-}
-.hero-button__invisible::after, .hero-button__invisible::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #20286F;
-  z-index: -1;
-}
-.hero-button__invisible::before {
-  /*   background: blue; */
-  transform: translateX(-100%);
-  z-index: 1;
-}
-.hero-button__invisible:hover:before {
-  transform: translateX(0);
-  transition: all 350ms ease;
-}
-.hero-button__invisible::after {
-  z-index: 0;
-  transform: translateX(100%);
-  transition: none;
-  transition: all 350ms ease;
-}
-.hero-button__invisible:hover:after {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 350ms 360ms ease;
 }
 .hero-arrow {
   margin-left: 10px;
@@ -338,9 +597,595 @@ a {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+@media (max-width: 1150px) {
+  .hero-image {
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .hero-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .hero-left {
+    width: 70%;
+  }
+  .hero-image {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .hero-left {
+    width: 100%;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
 
 .services {
-  background-color: #f7f4fb;
+  background-color: #F7F4FB;
+  padding-bottom: 100px;
+}
+.services-description {
+  margin-top: 3em;
+}
+.services-description__title {
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+.services-description__text {
+  text-align: left;
+  margin-bottom: 3em;
+}
+.services-card__container {
+  color: #696969;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Neue Haas Unica";
+  text-align: left;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 20px;
+  transition: all 0.15s ease;
+  margin-bottom: 20px;
+}
+.services-card__container:hover .services-card__link {
+  color: #11D665;
+}
+.services-card__image--container {
+  text-align: center;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #11D665;
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+}
+.services-card__title {
+  margin-top: 0;
+  color: #20286F;
+}
+.services-card__description {
+  font-weight: 400;
+  font-size: 15px;
+}
+@media (min-width: 1270px) {
+  .services-description {
+    flex-basis: 80%;
+    margin-top: 5em;
+  }
+  .services-card {
+    align-items: flex-start;
+    flex-basis: 90%;
+  }
+  .services-card__container:first-child {
+    margin-top: 100px;
+  }
+  .services-card__container:last-child {
+    margin-top: -100px;
+  }
+}
+@media (min-width: 1200px) {
+  .services-wrapper {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .services-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25em;
+  }
+  .services-card__container {
+    width: 45%;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .services-title {
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+  .services-description__title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  .services-description__text {
+    color: #445781;
+    font-family: "Neue Haas Unica";
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+}
+
+.steps {
+  color: #20286F;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  font-family: "Neue Haas Unica";
+  font-weight: 500;
+  text-align: center;
+}
+.steps-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.steps-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.we-container {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.we-button {
+  margin-top: 35px;
+}
+.we-image {
+  width: 100%;
+  margin-top: 35px;
+}
+.we-text__item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.we-text__item--img {
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 1024px) {
+  .we-container {
+    flex-wrap: nowrap;
+    gap: 2em;
+  }
+  .we-container__reversed {
+    flex-direction: row-reverse;
+  }
+  .we-image {
+    max-width: 600px;
+  }
+}
+
+.cardsteps {
+  background-color: #F7F4FB;
+}
+.cardsteps-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.cardsteps-description {
+  margin-top: 70px;
+}
+.cardsteps-description__cta {
+  color: #11D665;
+  font-weight: 700;
+}
+.cardsteps-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+  box-shadow: rgba(38, 42, 76, 0.1) 0px 5px 70px;
+}
+.cardsteps-card__title {
+  margin: 0;
+}
+.cardsteps-card__image {
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+  max-width: 40px;
+  max-height: 40px;
+}
+.cardsteps-videocard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 900px;
+}
+.cardsteps-videocard__wrapper {
+  position: relative;
+  height: 900px;
+}
+.cardsteps-videocard__text {
+  padding: 25px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cardsteps-videocard__title {
+  margin-top: 0;
+}
+.cardsteps-videocard__step {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardsteps-videocard__step--description {
+  font-size: 1rem;
+}
+.cardsteps-videocard__step--title {
+  font-size: 1.125rem;
+}
+.cardsteps-videocard__step--image {
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+  max-width: 25px;
+  max-height: 25px;
+}
+.cardsteps-videocard__video--image {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .cardsteps-wrapper {
+    justify-content: space-evenly;
+  }
+  .cardsteps-card {
+    width: 45%;
+  }
+}
+@media (min-width: 1100px) {
+  .cardsteps-videocard {
+    flex-direction: row;
+    height: 600px;
+    width: 100%;
+  }
+  .cardsteps-videocard__wrapper {
+    flex-wrap: nowrap;
+    height: 600px;
+  }
+  .cardsteps-videocard__video--image {
+    height: 100%;
+  }
+}
+
+.testimonials-container {
+  padding-top: 200px;
+}
+.testimonials-list {
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+.testimonials-card {
+  white-space: normal;
+  font-family: "Neue Haas Unica";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  margin: 15px;
+  padding: 30px;
+  scroll-snap-align: center;
+}
+.testimonials-card hr {
+  width: 100%;
+  border: 1px solid #e7e7e7;
+}
+.testimonials-card:hover {
+  box-shadow: 0 5px 70px rgba(38, 42, 76, 0.1);
+}
+.testimonials-card__image {
+  max-height: 60px;
+  max-width: 60px;
+}
+.testimonials-card__text {
+  color: #20286F;
+  margin: 0;
+}
+.testimonials-card__name {
+  color: #11D665;
+  font-weight: 500;
+}
+.testimonials-card__job {
+  color: #ACACAC;
+}
+@media (min-width: 768px) {
+  .testimonials-card {
+    width: calc(50% - 30px);
+  }
+}
+@media (min-width: 992px) {
+  .testimonials-card {
+    width: calc(33% - 30px);
+  }
+}
+
+.pricing {
+  font-family: "Neue Haas Unica";
+  text-align: center;
+  margin-top: 5em;
+}
+.pricing-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.pricing-benefits__item {
+  font-weight: 400;
+  color: #696969;
+  font-size: 14px;
+  line-height: 24px;
+}
+.pricing-benefits__item--emphasize {
+  color: #20286F;
+  font-weight: 700;
+}
+.pricing-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(38, 42, 76, 0.05);
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.pricing-card__best {
+  box-shadow: 0 20px 70px rgba(38, 42, 76, 0.15);
+  z-index: 1;
+}
+.pricing-card hr {
+  border: 1px solid #e7e7e7;
+}
+.pricing-card__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-top: 2em;
+}
+.pricing-card__type {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 70px;
+  color: #20286F;
+  background: #e7e7e7;
+  margin: 0;
+}
+.pricing-card__type--best {
+  background: #11D665;
+  color: white;
+}
+.pricing-card__price {
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #ccc;
+}
+.pricing-card__price--money {
+  font-size: 38px;
+  letter-spacing: -0.03em;
+  color: #1e266d;
+}
+.pricing-card__text {
+  padding: 39px 20px 20px 39px;
+  line-height: 34px;
+}
+.pricing-card__button {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+@media (min-width: 768px) {
+  .pricing-card {
+    width: calc(33.333% - 30px);
+  }
+  .pricing-card__best {
+    padding-bottom: 3%;
+  }
+}
+@media (min-width: 961px) {
+  .pricing-card__container {
+    gap: 0;
+    justify-content: center;
+  }
+}
+
+.form {
+  font-family: "Neue Haas Unica";
+  background-color: #F7F4FB;
+  padding-bottom: 100px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.form-right {
+  max-width: 940px;
+}
+.form-left {
+  margin-right: 2em;
+  display: none;
+}
+.form-collapsable {
+  padding: 25px 35px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  line-height: 1.3em;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+.form-collapsable__arrow {
+  position: absolute;
+  right: 35px;
+  top: 25px;
+  transform: translateY(-50%);
+  transform: rotate(225deg);
+}
+.form-collapsable__closed i {
+  transform: rotate(45deg);
+}
+.form-collapsable__closed p {
+  display: none;
+}
+.form-collapsable__closed h1 {
+  margin-bottom: 0;
+}
+.form-collapsable__title {
+  margin-bottom: 25px;
+}
+.form-card {
+  text-align: center;
+  box-shadow: 0 20px 70px rgba(38, 42, 76, 0.2);
+  padding: 55px 40px 29px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.form-card__description {
+  margin-bottom: 50px;
+}
+.form-input {
+  line-height: 55px;
+  padding: 0 20px;
+  width: 100%;
+  border-radius: 27px;
+  border: 1px solid #e9e9e9;
+}
+.form-input::placeholder {
+  color: #20286F;
+}
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 20px 70px rgba(38, 42, 76, 0.05);
+}
+.form-input__message {
+  font-family: inherit;
+  resize: none;
+}
+.form-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.form-button {
+  width: 100%;
+  max-width: 180px;
+}
+@media (min-width: 1024px) {
+  .form-left {
+    display: block;
+  }
+}
+
+.footer-container {
+  color: #20286F;
+  font-family: "Neue Haas Unica";
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 24px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-container__top, .footer-container__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375em;
+}
+.module-list__title {
+  font-weight: 600;
+  font-size: 1.125em;
+  margin-bottom: 0.75em;
+}
+
+.social-list {
+  display: flex;
+  gap: 1em;
+}
+.social-list__item {
+  width: 100%;
+  max-width: 16px;
+}
+.social-list__image {
+  max-width: 1em;
+  max-height: 1em;
+  filter: invert(10%) sepia(72%) saturate(3684%) hue-rotate(234deg) brightness(87%) contrast(90%);
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    gap: 1em;
+  }
+  .footer-container__bottom {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20%;
+  }
+
+  .global-list {
+    flex-direction: row;
+    gap: 1.25em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

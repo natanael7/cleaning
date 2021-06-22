@@ -23,7 +23,7 @@ steps
 wemake
 wetake
 webooking
-steps
+cardsteps
 freetime
 reviews
 pricing

@@ -18,8 +18,7 @@
     padding-left: 0
     margin: 0
     display: flex
-    gap: 1rem
-
+    gap: 2rem
     line-height: 40px
     font-size: 13px
     letter-spacing: .01rem
@@ -29,6 +28,9 @@
     justify-content: center
     align-items: center
     gap: 1rem
+
+    padding-top: 14px
+    padding-bottom: 14px
 
   &-right
     .header-list
@@ -46,3 +48,15 @@
 
     &__image:hover
       filter: $accent-filter
+
+@media (max-width: 1023px)
+  .header
+    &-link,&-clock
+      &__text
+        display: none
+
+@media (max-width: 767px)
+  .header
+    &-container
+      padding-right: 1rem
+      padding-left: 1rem

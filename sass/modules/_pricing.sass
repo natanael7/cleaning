@@ -1,0 +1,92 @@
+.pricing
+  font-family: $secondary-font
+  text-align: center
+
+  margin-top: 5em
+
+  &-benefits
+    display: flex
+    flex-direction: column
+    gap: 0.5rem
+    margin-top: 0.5rem
+    &__item
+      font-weight: 400
+      color: #696969
+
+      font-size: 14px
+      line-height: 24px
+
+      &--emphasize
+        color: $accent-color
+        font-weight: 700
+
+  &-card
+    border-radius: 15px
+    overflow: hidden
+    box-shadow: 0 20px 70px rgb(38 42 76 / 5%)
+
+    width: 100%
+
+    position: relative
+    z-index: -1
+
+    &__best
+      box-shadow: 0 20px 70px rgb(38 42 76 / 15%)
+      z-index: 1
+
+    hr
+      border: 1px solid #e7e7e7
+
+    &__container
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      gap: 30px
+
+      margin-top: 2em
+
+    &__type
+      font-size: 22px
+      font-weight: 400
+      letter-spacing: -.01em
+      line-height: 70px
+
+      color: $accent-color
+      background: #e7e7e7
+
+      margin: 0
+
+      &--best
+        background: $base-color
+        color: white
+
+    &__price
+      font-weight: 400
+      line-height: 1
+      margin-bottom: 0
+      font-size: 20px
+      color: #ccc
+      &--money
+        font-size: 38px
+        letter-spacing: -.03em
+        color: #1e266d
+
+    &__text
+      padding: 39px 20px 20px 39px
+      line-height: 34px
+
+    &__button
+      margin-top: 30px
+      margin-bottom: 45px
+
+  @media (min-width: 768px)
+    &-card
+      width: calc(33.333% - 30px)
+      &__best
+        padding-bottom: 3%
+
+  @media (min-width: 961px)
+    &-card
+      &__container
+        gap: 0
+        justify-content: center

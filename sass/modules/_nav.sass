@@ -19,16 +19,112 @@
     margin-right: 3em
 
   &-button
-    @include transparent-button
-    width: 202px
-    padding: 12px 34px
+    width: 180px
     font-size: 17px
 
   &-arrow
-    @include arrow($accent-color)
     @include transform(rotate(45deg))
 
   &-item
     display: flex
     flex-wrap: nowrap
     align-items: center
+
+  &-burger
+    display: none
+
+  @media (max-width: 1023px)
+    &-container
+      justify-content: space-between
+    &-list
+      display: none
+    &-burger
+      display: block
+      cursor: pointer
+      position: relative
+      transition-timing-function: linear
+      transition-duration: 0.15s
+      transition-property: opacity, filter
+      overflow: visible
+      width: 36px
+      height: 36px
+      padding: 0
+      border: none
+      background: 0 0
+
+      &__bar
+        display: block
+        position: absolute
+        width: 20px
+        height: 2px
+        left: 8px
+        top: 24px
+        transition-timing-function: ease
+        transition-duration: 0.15s
+        transition-property: transform
+        margin: 0
+        background-color: #39364e
+        border-radius: 0
+
+      &__bar::before
+        top: -7px
+        left: 0
+        transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+        display: block
+        content: ""
+        position: absolute
+        width: 20px
+        height: 2px
+        margin: 0
+        background-color: #39364e
+        border-radius: 0
+
+      &__bar::after
+        top: -14px
+        left: 0
+        transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, opacity 0.1s linear
+        display: block
+        content: ""
+        position: absolute
+        width: 20px
+        height: 2px
+        margin: 0
+        background-color: #39364e
+        border-radius: 0
+
+      &__opened
+        .nav-burger__bar
+          -webkit-text-size-adjust: 100%
+          -webkit-tap-highlight-color: transparent
+          font: inherit
+          color: inherit
+          text-transform: none
+          cursor: pointer
+          font-family: inherit
+          font-size: inherit
+          line-height: inherit
+          box-sizing: border-box
+          display: block
+          position: absolute
+          width: 20px
+          height: 2px
+          left: 8px
+          top: 24px
+          transition-duration: 0.15s
+          transition-property: transform
+          margin: 0
+          background-color: #39364e
+          border-radius: 0
+          transition-delay: 0.22s
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+          transform: translate3d(0, -7px, 0) rotate(-45deg)
+
+        .nav-burger__bar::before
+          top: 0
+          transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.16s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s
+          transform: rotate(-90deg)
+
+        .nav-burger__bar::after
+          top: 0
+          transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s linear 0.22s
+          opacity: 0
