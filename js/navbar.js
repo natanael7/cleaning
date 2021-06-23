@@ -1,28 +1,41 @@
-const elementSelector = ".nav-burger";
+const burgerClass = "nav-burger";
+const listClass = "nav-list";
+
 const attribute = "state";
+
 const valueIfClosed = "closed";
 const valueIfOpened = "opened";
-const classIfOpened = "nav-burger__opened";
 
-function changeNavState(state) {
-  navButton.setAttribute(attribute, state);
+const modifierIfOpened = "__opened";
+
+const classWithOpenModifier = (selector) => `${selector}${modifierIfOpened}`;
+
+function changeState(state, element) {
+  element.setAttribute(attribute, state);
 }
-function toggleClass(state) {
+function toggleClass(state, element, selector) {
   if (state) {
-    navButton.classList.add(classIfOpened);
+    element.classList.add(classWithOpenModifier(selector));
     return;
   }
-  navButton.classList.remove(classIfOpened);
+  element.classList.remove(classWithOpenModifier(selector));
 }
 
 function handleClosedNav() {
-  changeNavState(valueIfOpened);
-  toggleClass(1);
+  changeState(valueIfOpened, navButton);
+  toggleClass(1, navButton, burgerClass);
+
+  changeState(valueIfOpened, navList);
+  toggleClass(1, navList, listClass);
 }
 function handleOpenedNav() {
-  changeNavState(valueIfClosed);
-  toggleClass(0);
+  changeState(valueIfClosed, navButton);
+  toggleClass(0, navButton, burgerClass);
+
+  changeState(valueIfClosed, navList);
+  toggleClass(0, navList, listClass);
 }
+
 function handleNavClick() {
   // State can be either 'closed' either 'opene'
   const state = navButton.getAttribute(attribute);
@@ -40,6 +53,6 @@ function handleNavClick() {
   throw "Invalid NavBar State";
 }
 
-const navButton = document.querySelector(elementSelector);
+const navButton = document.querySelector(`.${burgerClass}`);
+const navList = document.querySelector(`.${listClass}`);
 navButton.addEventListener("click", handleNavClick);
-

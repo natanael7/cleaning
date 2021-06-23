@@ -7,7 +7,7 @@
   &-container
     display: flex
     align-items: center
-
+    position: relative
   &-logo
     $max: 130px
     width: 100%
@@ -41,14 +41,41 @@
       font-size: 14px
       gap: 1em
 
-
-
-  
-  @media (max-width: 1023px)
     &-container
       justify-content: space-between
     &-list
-      display: none
+      flex-direction: column
+      gap: 20px
+
+      position: absolute
+      left: 0
+      right: 100%
+      top: 100%
+
+      padding: inherit
+
+      background: #ffffff
+      z-index: 5
+
+      font-size: 1rem
+
+      overflow: hidden
+
+      max-height: 0
+      transition: max-height 1s
+
+      &__opened
+        max-height: 100vh
+
+    &-item
+      justify-content: space-between
+
+      &:last-child
+        margin-bottom: 25px
+
+    &-button
+      width: 100%
+
     &-burger
       display: block
       cursor: pointer
