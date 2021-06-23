@@ -2,7 +2,8 @@
   @include basic-text
   font-family: $ternary-font
   font-weight: 500
-  padding-top: 15px
+  padding: 16px 0
+  background: #ffffff
 
   &-container
     display: flex
@@ -84,6 +85,14 @@
       .nav-sub
         max-height: 100vh
 
+  &-fixed
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 90
+
+
   @media (min-width: 1201px)
     &-item
       &:hover
@@ -91,6 +100,21 @@
           max-height: 100vh
 
   @media (max-width: 1200px)
+    &-item
+      position: relative
+      .nav-sub
+        color: $accent-color
+        margin-top: 10px
+        margin-left: 5px
+        opacity: .87
+        max-height: 0
+
+      &__opened
+        margin-bottom: calc(175px + 10px + 5px)
+        color: $base-color
+        .nav-sub
+          max-height: 100vh
+
     &-container
       justify-content: space-between
     &-list

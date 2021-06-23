@@ -405,7 +405,8 @@ button:focus {
   font-weight: 600;
   font-family: "Roboto";
   font-weight: 500;
-  padding-top: 15px;
+  padding: 16px 0;
+  background: #ffffff;
 }
 .nav-container {
   display: flex;
@@ -483,12 +484,36 @@ button:focus {
 .nav-item__opened .nav-sub {
   max-height: 100vh;
 }
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+}
 @media (min-width: 1201px) {
   .nav-item:hover .nav-sub {
     max-height: 100vh;
   }
 }
 @media (max-width: 1200px) {
+  .nav-item {
+    position: relative;
+  }
+  .nav-item .nav-sub {
+    color: #20286F;
+    margin-top: 10px;
+    margin-left: 5px;
+    opacity: 0.87;
+    max-height: 0;
+  }
+  .nav-item__opened {
+    margin-bottom: calc(175px + 10px + 5px);
+    color: #11D665;
+  }
+  .nav-item__opened .nav-sub {
+    max-height: 100vh;
+  }
   .nav-container {
     justify-content: space-between;
   }
