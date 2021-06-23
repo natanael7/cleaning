@@ -8,6 +8,7 @@
     display: flex
     align-items: center
     position: relative
+
   &-logo
     $max: 130px
     width: 100%
@@ -20,6 +21,7 @@
     width: 100%
     justify-content: flex-end
     gap: 4.5%
+    transition: max-height .65s linear
 
   &-button
     width: 180px
@@ -33,17 +35,67 @@
     flex-wrap: nowrap
     align-items: center
 
+    transition: color .3s ease-out, margin .65s
+
   &-burger
     display: none
 
-  @media (max-width: 1200px)
-    &-list
-      font-size: 14px
-      gap: 1em
+  &-sub
+    color: $accent-color
 
+    max-height: 0
+    transition: max-height .45s
+
+    display: flex
+    flex-direction: column
+
+    position: absolute
+
+    top: 100%
+
+    white-space: nowrap
+
+    overflow: hidden
+
+    &__item
+      padding: 0.5em 0
+
+      transition: color .15s ease-out
+
+      &:hover
+        color: $base-color
+
+  &-item
+    &:hover
+      color: $base-color
+
+  &-item
+    position: relative
+    .nav-sub
+      color: $accent-color
+      margin-top: 10px
+      margin-left: 5px
+      opacity: .87
+      max-height: 0
+
+    &__opened
+      margin-bottom: calc(175px + 10px + 5px)
+      color: $base-color
+      .nav-sub
+        max-height: 100vh
+
+  @media (min-width: 1201px)
+    &-item
+      &:hover
+        .nav-sub
+          max-height: 100vh
+
+  @media (max-width: 1200px)
     &-container
       justify-content: space-between
     &-list
+      font-size: 14px
+
       flex-direction: column
       gap: 20px
 
@@ -55,14 +107,13 @@
       padding: inherit
 
       background: #ffffff
-      z-index: 5
+      z-index: 6
 
       font-size: 1rem
 
       overflow: hidden
 
       max-height: 0
-      transition: max-height 1s
 
       &__opened
         max-height: 100vh
