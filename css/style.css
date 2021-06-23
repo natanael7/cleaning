@@ -974,11 +974,9 @@ a {
   box-shadow: 0 20px 70px rgba(38, 42, 76, 0.05);
   width: 100%;
   position: relative;
-  z-index: -1;
 }
 .pricing-card__best {
   box-shadow: 0 20px 70px rgba(38, 42, 76, 0.15);
-  z-index: 1;
 }
 .pricing-card hr {
   border: 1px solid #e7e7e7;
@@ -1062,6 +1060,9 @@ a {
   background: #fff;
   border: 1px solid #e7e7e7;
   position: relative;
+  box-sizing: content-box;
+  overflow: hidden;
+  transition: height 0.35s ease-in;
 }
 .form-collapsable__arrow {
   position: absolute;
@@ -1072,12 +1073,6 @@ a {
 }
 .form-collapsable__closed i {
   transform: rotate(45deg);
-}
-.form-collapsable__closed p {
-  display: none;
-}
-.form-collapsable__closed h1 {
-  margin-bottom: 0;
 }
 .form-collapsable__title {
   margin-bottom: 25px;
@@ -1173,6 +1168,23 @@ a {
 }
 
 @media (min-width: 768px) {
+  .main {
+    min-height: 200vh;
+    background: #fff;
+    z-index: -4;
+    margin-bottom: 930px;
+    margin-bottom: 440px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100vh;
+    z-index: -5;
+  }
+
   .footer-container {
     gap: 1em;
   }

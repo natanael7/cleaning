@@ -46,6 +46,23 @@
       filter: $accent-filter
 
 @media (min-width:768px)
+  // Sticky footer from here
+  .main
+    min-height: 200vh
+    background: #fff
+    z-index: -4
+    margin-bottom: 930px
+    margin-bottom: $sticky-footer-height
+
+  .footer
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    max-height: 100vh
+    z-index: -5
+  // Sticky footer to here
+
   .footer
     &-container
       gap: 1em

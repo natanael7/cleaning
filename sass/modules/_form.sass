@@ -26,6 +26,10 @@
 
     position: relative
 
+    box-sizing: content-box
+    overflow: hidden
+    transition: height .35s ease-in
+
     &__arrow
       position: absolute
       right: 35px
@@ -39,9 +43,9 @@
       i
         transform: rotate(45deg)
       p
-        display: none
+        // display: none
       h1
-        margin-bottom: 0
+        // margin-bottom: 0
 
     &__title
       margin-bottom: 25px
