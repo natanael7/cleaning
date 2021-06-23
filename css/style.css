@@ -6,8 +6,8 @@
 }
 @media (max-width: 1345px) {
   .container {
-    padding-right: 115px;
-    padding-left: 115px;
+    padding-right: 105px;
+    padding-left: 105px;
   }
 }
 @media (max-width: 1023px) {
@@ -408,14 +408,16 @@ a {
   align-items: center;
 }
 .nav-logo {
-  width: 10rem;
+  width: 100%;
+  max-width: 130px;
+  max-height: 130px;
+  margin-right: 10px;
 }
 .nav-list {
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  gap: 3em;
-  margin-right: 3em;
+  gap: 4.5%;
 }
 .nav-button {
   width: 180px;
@@ -435,6 +437,12 @@ a {
 }
 .nav-burger {
   display: none;
+}
+@media (max-width: 1200px) {
+  .nav-list {
+    font-size: 14px;
+    gap: 1em;
+  }
 }
 @media (max-width: 1023px) {
   .nav-container {
@@ -941,7 +949,7 @@ a {
     width: calc(50% - 30px);
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024) {
   .testimonials-card {
     width: calc(33% - 30px);
   }
@@ -1029,7 +1037,7 @@ a {
     padding-bottom: 3%;
   }
 }
-@media (min-width: 961px) {
+@media (min-width: 1024px) {
   .pricing-card__container {
     gap: 0;
     justify-content: center;
