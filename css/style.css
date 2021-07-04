@@ -216,9 +216,9 @@
   text-align: center;
   line-height: 1.3;
   font-weight: 800;
-  font-size: 1.75rem;
-  margin: 0;
-  margin-bottom: 20px;
+  font-size: 2.625rem;
+  margin-top: 70px;
+  margin-bottom: 75px;
 }
 .section-description {
   color: #445781;
@@ -300,6 +300,36 @@
   font-size: 15px;
   margin: 0 0 10px;
   line-height: 1.6;
+}
+
+.pages {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+.pages-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 9px 20.8px 1.2px rgba(16, 37, 65, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.pages-button__image {
+  width: 20px;
+  filter: invert(75%) sepia(0%) saturate(32%) hue-rotate(205deg) brightness(99%) contrast(96%);
+  transition: all 0.3s;
+}
+.pages-button:hover {
+  background: #11D665;
+}
+.pages-button:hover .pages-button__image {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(104%) contrast(101%);
 }
 
 * {
@@ -456,6 +486,10 @@ button:focus {
   top: 100%;
   white-space: nowrap;
   overflow: hidden;
+  margin-top: 10px;
+  margin-left: 5px;
+  opacity: 0.87;
+  max-height: 0;
 }
 .nav-sub__item {
   padding: 0.5em 0;
@@ -464,22 +498,18 @@ button:focus {
 .nav-sub__item:hover {
   color: #11D665;
 }
-.nav-item:hover {
-  color: #11D665;
-}
 .nav-item {
   position: relative;
 }
-.nav-item .nav-sub {
-  color: #20286F;
-  margin-top: 10px;
-  margin-left: 5px;
-  opacity: 0.87;
-  max-height: 0;
+.nav-item:hover {
+  color: #11D665;
 }
 .nav-item__opened {
   margin-bottom: calc(175px + 10px + 5px);
   color: #11D665;
+}
+.nav-item__opened i {
+  transform: rotate(45deg);
 }
 .nav-item__opened .nav-sub {
   max-height: 100vh;
@@ -490,6 +520,7 @@ button:focus {
   left: 0;
   right: 0;
   z-index: 90;
+  box-shadow: 0 2px 40px rgba(15, 15, 15, 0.05);
 }
 @media (min-width: 1201px) {
   .nav-item:hover .nav-sub {
@@ -1145,6 +1176,7 @@ button:focus {
 .form-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .form-right {
   max-width: 940px;
@@ -1298,6 +1330,86 @@ button:focus {
   .global-list {
     flex-direction: row;
     gap: 1.25em;
+  }
+}
+.jobs {
+  padding-bottom: 65px;
+}
+.jobs-card {
+  padding: 25px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 33.333%;
+  white-space: initial;
+  margin-right: 1rem;
+}
+.jobs-card__container {
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  padding: 75px 10px;
+  gap: 2rem;
+}
+.jobs-card__image {
+  height: 50px;
+  width: 50px;
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+  margin-bottom: 15px;
+}
+.jobs-card__link {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Neue Haas Unica";
+  text-align: left;
+  color: #11D665;
+  transition: color 0.3s;
+}
+.jobs-card__link:hover {
+  color: #20286F;
+}
+
+.pay-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.pay-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.pay-benefits {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 40px 25px;
+}
+.pay-benefits--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(50% - 3rem);
+  text-align: center;
+}
+.pay-benefits--card__image {
+  height: 35px;
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+  margin-bottom: 15px;
+}
+@media (max-width: 1100px) {
+  .pay-benefits {
+    gap: 1rem;
+  }
+  .pay-benefits--card {
+    width: calc(50% - 0.5rem);
+  }
+}
+@media (max-width: 1024px) {
+  .pay-container {
+    flex-direction: column-reverse;
+  }
+  .pay-benefits {
+    width: 100%;
   }
 }
 

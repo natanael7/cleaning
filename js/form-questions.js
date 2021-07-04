@@ -1,4 +1,5 @@
 const arrowSelector = ".form-collapsable__arrow";
+
 const childFitHeightSelector = "h1";
 const maxFitHeightSelector = "p";
 
