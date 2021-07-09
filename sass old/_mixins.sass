@@ -1,0 +1,112 @@
+@mixin transition($time, $style)
+  -webkit-transition: $time
+  -moz-transition: $time
+  -ms-transition: $time
+  -o-transition: $time
+  transition: $style
+
+@mixin transform($transformation)
+  -webkit-transform: $transformation
+  -moz-transform: $transformation
+  -ms-transform: $transformation
+  -o-transform: $transformation
+  transform: $transformation
+
+@mixin base-svg
+  filter: $base-filter
+
+@mixin accent-svg
+  filter: $accent-filter
+
+@mixin header-svg
+  width: 1rem
+  filter: $base-filter
+  @include transition(.25s, all .25s ease 0s)
+
+@mixin basic-text
+  color: $accent-color
+  font-family: $primary-font
+  letter-spacing: -.01em
+  font-weight: 600
+
+@mixin description-text
+  color: $fade-accent-color
+  font-family: $secondary-font
+  font-weight: 400
+  font-size: 20px
+
+  letter-spacing: .01em
+  line-height: 1.5
+
+@mixin sliding-button($first, $second)
+  background-color: $second
+  cursor: pointer
+  border-radius: 27px
+  color: $first
+  position: relative
+  overflow: hidden
+
+  span
+    z-index: 5
+    position: relative
+    transition: all 350ms ease
+
+  &:hover span
+    color: $second
+
+  &::after,
+  &::before
+    content: " "
+    display: block
+    position: absolute
+    width: 100%
+    top: 0
+    bottom: 0
+    right: 0
+    background: $first
+    z-index: -1
+
+  &::before
+    /*   background: blue; */
+    transform: translateX(-100%)
+    z-index: 1
+
+  &:hover:before
+    transform: translateX(0)
+    transition: all 350ms ease
+
+  &::after
+    z-index: 0
+    transform: translateX(100%)
+    transition: none
+    transition: all 350ms ease
+
+  &:hover:after
+    opacity: 1
+    transform: translateX(0)
+    transition: all 350ms 360ms ease
+
+@mixin transparent-button
+  @include sliding-button($base-color, white)
+  border: solid 1px $base-color
+
+@mixin base-button
+  @include sliding-button($accent-color, $base-color,)
+  border: none
+  span
+    color: white
+  &:hover
+    span
+      color: white
+
+@mixin invisible-button
+  @include sliding-button($accent-color, white)
+  border: none
+
+@mixin arrow($color)
+  margin-left: 10px
+  border: solid $color
+  border-width: 0 2px 2px 0
+  display: inline-block
+  padding: 3px
+  cursor: pointer

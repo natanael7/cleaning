@@ -332,6 +332,33 @@
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(104%) contrast(101%);
 }
 
+.intro-banner {
+  position: relative;
+  padding: 100px 0;
+}
+.intro-banner__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Nunito", sans-serif;
+  color: #20286F;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .intro-banner__title {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 767px) {
+  .intro-banner__title {
+    font-size: 2rem;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1411,6 +1438,734 @@ button:focus {
   .pay-benefits {
     width: 100%;
   }
+}
+
+.products {
+  padding-top: 50px;
+}
+.products-container {
+  display: flex;
+  flex-direction: column;
+}
+.products-title {
+  margin: 40px 0 20px;
+}
+.products-wrapper {
+  margin: 80px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+@media (max-width: 600px) {
+  .products-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.products-card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+@media (max-width: 1200px) {
+  .products-card {
+    width: 35%;
+  }
+}
+@media (max-width: 945px) {
+  .products-card {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .products-card {
+    width: 65%;
+  }
+}
+@media (max-width: 550px) {
+  .products-card {
+    width: 75%;
+  }
+}
+.products-card__image {
+  width: 100%;
+  height: 100%;
+  height: 200px;
+}
+.products-card__title {
+  margin: 10px auto;
+}
+.products-card__link {
+  margin: 0 auto;
+}
+.products-card__btn {
+  margin-bottom: 10px;
+  padding: 14px 20px;
+}
+@media (max-width: 767px) {
+  .products-wrapper {
+    gap: 50px;
+  }
+  .products-title {
+    font-size: 2.1rem;
+  }
+}
+
+.product-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-holder {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 945px) {
+  .product-holder {
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .product-holder {
+    gap: 10px;
+  }
+}
+.product-img {
+  width: 50%;
+  margin: 30px 0;
+}
+.product-general {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .product-general {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.product-description {
+  width: 60%;
+}
+@media (max-width: 1023px) {
+  .product-description {
+    width: 80%;
+  }
+}
+.product-card {
+  padding: 40px;
+  width: 35%;
+  background-color: #e9f2fb;
+}
+@media (max-width: 1023px) {
+  .product-card {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .product-card {
+    width: 100%;
+  }
+}
+.product-card__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+.product-card__details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+}
+.product-card__details-name {
+  color: #20286F;
+  font-weight: 700;
+}
+.product-card__details-info {
+  margin-left: auto;
+  color: #445781;
+}
+.product-card__details-tel {
+  color: #20286F;
+}
+.product-title {
+  text-align: left;
+  margin: 20px 0;
+}
+@media (max-width: 945px) {
+  .product-title {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 767px) {
+  .product-title {
+    font-size: 1.8rem;
+  }
+}
+.product-benefits {
+  padding-bottom: 70px;
+  background-color: #F7F4FB;
+}
+.product-benefits__row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+@media (max-width: 1200px) {
+  .product-benefits__row {
+    flex-wrap: wrap;
+  }
+}
+.product-benefits__card {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 10px;
+  font-family: "Neue Haas Unica";
+}
+@media (max-width: 1200px) {
+  .product-benefits__card {
+    width: 40%;
+  }
+}
+@media (max-width: 550px) {
+  .product-benefits__card {
+    width: 90%;
+  }
+}
+.product-benefits__img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+}
+.product-benefits__title {
+  text-align: center;
+  margin-bottom: 0;
+  color: #20286F;
+}
+.product-benefits__text {
+  color: #445781;
+  text-align: center;
+  margin-bottom: auto;
+}
+.product-steps {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-steps__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-steps__subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+}
+@media (max-width: 945px) {
+  .product-steps__subtitle {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 767px) {
+  .product-steps__subtitle {
+    font-size: 1rem;
+  }
+}
+.product-steps__title {
+  margin: 0;
+}
+@media (max-width: 945px) {
+  .product-steps__title {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 767px) {
+  .product-steps__title {
+    font-size: 1.8rem;
+  }
+}
+.product-steps__row {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+@media (max-width: 945px) {
+  .product-steps__row {
+    flex-wrap: wrap;
+  }
+}
+.product-steps__card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "Neue Haas Unica";
+}
+@media (max-width: 1200px) {
+  .product-steps__card {
+    width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  .product-steps__card {
+    width: 90%;
+  }
+}
+.product-steps__card-block {
+  width: 120px;
+  height: 120px;
+  background-color: #d1e4fd;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+.product-steps__card-nmb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-family: "Nunito", sans-serif;
+  color: #20286F;
+  font-weight: 600;
+}
+.product-steps__card-title {
+  text-align: center;
+  margin-bottom: 0;
+  color: #20286F;
+}
+.product-steps__card-text {
+  text-align: center;
+  color: #445781;
+  margin-bottom: auto;
+  padding: 0 15px;
+}
+.product-content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.product-info {
+  margin-top: 100px;
+  width: 70%;
+  border-bottom: 1px solid #696969;
+}
+@media (max-width: 945px) {
+  .product-info {
+    width: 80%;
+    margin-top: 0;
+  }
+}
+@media (max-width: 550px) {
+  .product-info {
+    width: 100%;
+  }
+}
+.product-info__title {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+@media (max-width: 767px) {
+  .product-info__title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 550px) {
+  .product-info__title {
+    font-size: 1.6rem;
+  }
+}
+.product-info__description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.product-info__step {
+  margin-bottom: 20px;
+  font-family: "Neue Haas Unica";
+}
+.product-info__step-row {
+  display: flex;
+  justify-content: space-between;
+}
+.product-info__step span:first-child {
+  color: #20286F;
+  font-weight: 600;
+}
+.product-info__step span:last-child {
+  color: #20286F;
+}
+
+.error404-image {
+  width: 200px;
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+}
+.error404-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.error404-title {
+  margin: 20px 0;
+  font-size: 4rem;
+}
+.error404-description {
+  display: block;
+  width: 60%;
+}
+.error404-btn {
+  margin-top: 30px;
+}
+
+.why-container {
+  margin-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+.why-story {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.why-subtitle {
+  text-transform: uppercase;
+  color: #11D665;
+}
+.why-title {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.why-description {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.why-link {
+  color: #20286F;
+}
+.why-btn {
+  text-transform: uppercase;
+}
+.why-image {
+  width: 40%;
+}
+.why-image__size {
+  width: 100%;
+  border-radius: 100%;
+}
+@media (max-width: 1100px) {
+  .why-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .why-story {
+    width: 100%;
+  }
+  .why-image {
+    width: 70%;
+  }
+}
+.why-wrapper {
+  background-color: #F7F4FB;
+}
+.why-row {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-bottom: 50px;
+}
+.why-card {
+  width: 40%;
+  min-height: 167px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+.why-card__img {
+  width: 100px;
+}
+.why-card__img-size {
+  width: 100%;
+}
+.why-paragraph {
+  width: 60%;
+}
+.why-paragraph__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+@media (max-width: 1100px) {
+  .why-card {
+    min-height: 200px;
+  }
+}
+@media (max-width: 945px) {
+  .why-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-card {
+    width: 90%;
+    align-items: center;
+  }
+  .why-card__img {
+    width: 80px;
+  }
+  .why-paragraph {
+    align-self: center;
+  }
+}
+
+.importance {
+  margin-top: 100px;
+}
+.importance-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+.importance-content {
+  width: 30%;
+}
+.importance-content__icon {
+  width: 100%;
+  border-radius: 20px;
+}
+.importance-paragraph {
+  width: 50%;
+}
+.importance-paragraph__title {
+  color: #20286F;
+  font-weight: 800;
+  font-size: 1.8rem;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.importance-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+.importance-description {
+  text-align: left;
+}
+.importance-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.importance-img {
+  width: 18px;
+  filter: invert(67%) sepia(13%) saturate(6357%) hue-rotate(96deg) brightness(101%) contrast(87%);
+}
+.importance-wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+.importance-block {
+  width: 50%;
+}
+.importance-research {
+  text-align: left;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+.importance-photo {
+  width: 40%;
+}
+.importance-photo__img {
+  width: 100%;
+  border-radius: 20px;
+}
+@media (max-width: 1150px) {
+  .importance-container {
+    align-items: center;
+  }
+}
+@media (max-width: 945px) {
+  .importance-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .importance-content {
+    width: 50%;
+  }
+  .importance-paragraph {
+    width: 100%;
+  }
+  .importance-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .importance-block {
+    width: 100%;
+  }
+  .importance-photo {
+    width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  .importance-title {
+    font-size: 2.1rem;
+  }
+}
+
+.testimonials-block {
+  width: 70%;
+}
+.testimonials-title {
+  margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .testimonials-title {
+    font-size: 2.1rem;
+  }
+}
+
+.reviews {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reviews-container {
+  position: relative;
+  width: 800px;
+  min-width: 350px;
+  min-height: 250px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .reviews-container {
+    width: 50%;
+    margin: auto;
+  }
+}
+.reviews-wrapper {
+  width: 300%;
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: 1s;
+}
+.reviews-card {
+  width: 800px;
+  min-height: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 10px;
+}
+@media (max-width: 800px) {
+  .reviews-card {
+    flex-direction: column;
+  }
+}
+.reviews-card__thumb {
+  width: 70%;
+  height: 250px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .reviews-card__thumb {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+.reviews-card__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reviews-card__thumb-name {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 5px 20px;
+  background: #fff;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.reviews-card__body {
+  width: 120%;
+  min-height: 100%;
+  height: auto;
+  margin-left: 20px;
+  position: relative;
+  padding-bottom: 50px;
+}
+@media (max-width: 800px) {
+  .reviews-card__body {
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+  }
+}
+.reviews-card__body-text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 30px;
+}
+.reviews-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.reviews-indicators__btn {
+  background: #fff;
+  border: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #11D665;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+.reviews-indicators__btn.active {
+  width: 30px;
+  border-radius: 50px;
+  background: #11D665;
 }
 
 /*# sourceMappingURL=style.css.map */

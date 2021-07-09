@@ -1,0 +1,35 @@
+.we
+  &-container
+    padding-top: 60px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+  &-button
+    margin-top: 35px
+
+  &-image
+    width: 100%
+    margin-top: 35px
+
+  &-text
+    &__item
+      display: flex
+      flex-wrap: nowrap
+      gap: 1.25rem
+      margin-bottom: 1rem
+      &--img
+        @include base-svg
+        width: 20px
+        height: 20px
+
+  @media (min-width:1024px)
+    &-container
+      flex-wrap: nowrap
+      gap: 2em
+      
+      &__reversed
+        flex-direction: row-reverse
+
+    &-image
+      max-width: 600px

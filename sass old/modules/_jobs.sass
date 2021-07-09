@@ -1,0 +1,36 @@
+.jobs
+  padding-bottom: 65px
+  &-card
+    padding: 25px
+
+    display: inline-flex
+
+    flex-direction: column
+
+    width: 33.333%
+
+    white-space: initial
+    margin-right: 1rem
+
+    &__container
+      overflow: auto
+      white-space: nowrap
+      scroll-snap-type: x mandatory
+      padding: 75px 10px
+      gap: 2rem
+
+    &__image
+      height: 50px
+      width: 50px
+      filter: $base-filter
+      margin-bottom: 15px
+
+    &__link
+      font-size: 15px
+      line-height: 24px
+      font-family: $secondary-font
+      text-align: left
+      color: $base-color
+      transition: color .3s
+      &:hover
+        color: $accent-color

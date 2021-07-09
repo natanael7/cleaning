@@ -1,0 +1,53 @@
+.products
+  padding-top: 50px 
+  &-container
+    display: flex
+    flex-direction: column
+
+  &-title 
+    margin: 40px 0 20px
+  &-wrapper
+    margin: 80px 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 60px 
+    @media (max-width: 600px)
+      flex-direction: column
+      align-items: center
+
+  &-card
+    width: 25%
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    @media (max-width: 1200px)
+      width: 35%
+    @media (max-width: 945px)
+      width: 40%
+    @media (max-width: 600px)
+      width: 65%
+    @media (max-width: 550px)
+      width: 75%
+
+    &__image
+      width: 100%
+      height: 100%
+      height: 200px
+
+    &__title
+      margin: 10px auto
+
+    &__link
+      margin: 0 auto
+
+    &__btn
+      margin-bottom: 10px 
+      padding: 14px 20px  
+
+  @media (max-width: 767px)
+    &-wrapper
+      gap: 50px 
+    &-title 
+      font-size: 2.1rem
+
