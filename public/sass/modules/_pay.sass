@@ -1,0 +1,46 @@
+.pay
+  &-container
+    display: flex
+    align-items: center
+    margin-top: 15px
+  &-title
+    margin-top: 0
+    margin-bottom: 15px
+
+  &-subtitle
+
+  &-benefits
+    display: flex
+    gap: 3rem
+    flex-wrap: wrap
+    width: 50%
+    padding: 40px 25px
+    &--card
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      width: calc(50% - 3rem)
+
+      text-align: center
+      &__image
+        height: 35px
+        filter: $base-filter
+        margin-bottom: 15px
+      &__title
+
+      &__description
+
+  &-form
+
+  @media (max-width:1100px)
+    &-benefits
+      gap: 1rem
+      &--card
+        width: calc(50% - 0.5rem)
+
+  @media (max-width:1024px)
+    &-container
+      flex-direction: column-reverse
+    &-benefits
+      width: 100%

@@ -1,0 +1,246 @@
+.nav
+  @include basic-text
+  font-family: $ternary-font
+  font-weight: 500
+  padding: 16px 0
+  background: #ffffff
+
+  &-container
+    display: flex
+    align-items: center
+    position: relative
+
+  &-logo
+    $max: 130px
+    width: 100%
+    max-width: $max
+    max-height: $max
+    margin-right: 10px
+
+  &-list
+    display: flex
+    width: 100%
+    justify-content: flex-end
+    gap: 4.5%
+    transition: max-height .65s linear
+
+  &-button
+    width: 180px
+    font-size: 17px
+
+  &-arrow
+    @include transform(rotate(45deg))
+
+  &-item
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+
+    transition: color .3s ease-out, margin .65s
+
+  &-burger
+    display: none
+
+  &-sub
+    color: $accent-color
+
+    background: #ffffff
+    padding: 0px 20px
+    border-radius: 6px
+
+    max-height: 0
+    transition: max-height .45s
+
+    display: flex
+    flex-direction: column
+
+    position: absolute
+
+    top: 100%
+
+    white-space: nowrap
+
+    overflow: hidden
+
+    margin-top: 10px
+    margin-left: 5px
+    opacity: .87
+    max-height: 0
+
+    &__item
+      padding: 0.5em 0
+
+      transition: color .15s ease-out
+
+      &:hover
+        color: $base-color
+
+  &-item
+    position: relative
+    &:hover
+      color: $base-color
+
+    &__opened
+      margin-bottom: calc(175px + 10px + 5px)
+      color: $base-color
+      i
+        transform: rotate(45deg)
+      .nav-sub
+        max-height: 100vh
+
+  &-fixed
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 90
+    box-shadow: 0 2px 40px hsl(0deg 0% 6% / 5%)
+
+  @media (min-width: 1200px)
+    &-item
+      &:hover
+        .nav-sub
+          max-height: 100vh
+
+  @media (max-width: 1200px)
+    &-item
+      position: relative
+      .nav-sub
+        color: $accent-color
+        margin-top: 10px
+        margin-left: 5px
+        opacity: .87
+        max-height: 0
+
+      &__opened
+        margin-bottom: calc(175px + 10px + 5px)
+        color: $base-color
+        .nav-sub
+          max-height: 100vh
+
+    &-container
+      justify-content: space-between
+    &-list
+      font-size: 14px
+
+      flex-direction: column
+      gap: 20px
+
+      position: absolute
+      left: 0
+      right: 100%
+      top: 100%
+
+      padding: inherit
+
+      background: #ffffff
+      z-index: 6
+
+      font-size: 1rem
+
+      overflow: hidden
+
+      max-height: 0
+
+      &__opened
+        max-height: 100vh
+
+    &-item
+      justify-content: space-between
+
+      &:last-child
+        margin-bottom: 25px
+
+    &-button
+      width: 100%
+
+    &-burger
+      display: block
+      cursor: pointer
+      position: relative
+      transition-timing-function: linear
+      transition-duration: 0.15s
+      transition-property: opacity, filter
+      overflow: visible
+      width: 36px
+      height: 36px
+      padding: 0
+      border: none
+      background: 0 0
+
+      &__bar
+        display: block
+        position: absolute
+        width: 20px
+        height: 2px
+        left: 8px
+        top: 24px
+        transition-timing-function: ease
+        transition-duration: 0.15s
+        transition-property: transform
+        margin: 0
+        background-color: #39364e
+        border-radius: 0
+
+      &__bar::before
+        top: -7px
+        left: 0
+        transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+        display: block
+        content: ""
+        position: absolute
+        width: 20px
+        height: 2px
+        margin: 0
+        background-color: #39364e
+        border-radius: 0
+
+      &__bar::after
+        top: -14px
+        left: 0
+        transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, opacity 0.1s linear
+        display: block
+        content: ""
+        position: absolute
+        width: 20px
+        height: 2px
+        margin: 0
+        background-color: #39364e
+        border-radius: 0
+
+      &__opened
+        .nav-burger__bar
+          -webkit-text-size-adjust: 100%
+          -webkit-tap-highlight-color: transparent
+          font: inherit
+          color: inherit
+          text-transform: none
+          cursor: pointer
+          font-family: inherit
+          font-size: inherit
+          line-height: inherit
+          box-sizing: border-box
+          display: block
+          position: absolute
+          width: 20px
+          height: 2px
+          left: 8px
+          top: 24px
+          transition-duration: 0.15s
+          transition-property: transform
+          margin: 0
+          background-color: #39364e
+          border-radius: 0
+          transition-delay: 0.22s
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+          transform: translate3d(0, -7px, 0) rotate(-45deg)
+
+        .nav-burger__bar::before
+          top: 0
+          transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.16s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s
+          transform: rotate(-90deg)
+
+        .nav-burger__bar::after
+          top: 0
+          transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s linear 0.22s
+          opacity: 0

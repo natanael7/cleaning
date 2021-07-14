@@ -1,0 +1,62 @@
+.header
+
+  &-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &-clock
+
+    &__image
+      @include header-svg
+
+    &__text
+      @include basic-text
+
+  &-list,
+  &-link
+    padding-left: 0
+    margin: 0
+    display: flex
+    gap: 2rem
+    line-height: 40px
+    font-size: 13px
+    letter-spacing: .01rem
+
+  &-item
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1rem
+
+    padding-top: 14px
+    padding-bottom: 14px
+
+  &-right
+    .header-list
+      gap: 2rem
+
+  &-link
+    @include basic-text
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1rem
+
+    &__image
+      @include header-svg
+
+    &__image:hover
+      filter: $accent-filter
+
+@media (max-width: 1023px)
+  .header
+    &-link,&-clock
+      &__text
+        display: none
+
+@media (max-width: 767px)
+  .header
+    &-container
+      padding-right: 1rem
+      padding-left: 1rem

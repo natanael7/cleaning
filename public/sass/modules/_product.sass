@@ -1,0 +1,197 @@
+.product
+  &-intro
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &-holder
+    display: flex
+    justify-content: center
+    gap: 20px
+    @media ( max-width: 945px )
+      gap: 20px
+    @media ( max-width: 767px )
+      gap: 10px
+  &-img
+    width: 50%
+    margin: 30px 0
+  &-general
+    display: flex
+    justify-content: space-between
+    @media ( max-width: 1023px )
+      flex-direction: column-reverse
+      justify-content: center
+      align-items: center
+  &-description
+    width: 60%
+    @media ( max-width: 1023px )
+      width: 80%
+  &-card
+    padding: 40px
+    width: 35%
+    background-color: #e9f2fb
+    @media ( max-width: 1023px )
+      width: 60%
+    @media ( max-width: 600px )
+      width: 100%
+    &__title
+      margin: 0
+      margin-bottom: 25px
+      font-size: 2rem
+    &__details
+      display: flex
+      align-items: center
+      margin-bottom: 10px
+      font-family: $primary-font
+      &-name
+        color: $accent-color
+        font-weight: 700
+      &-info
+        margin-left: auto
+        color: $fade-accent-color
+      &-tel
+        color: $accent-color
+
+  &-title
+    text-align: left
+    margin: 20px 0
+    @media ( max-width: 945px )
+      font-size: 2.1rem
+    @media ( max-width: 767px )
+      font-size: 1.8rem
+
+  &-benefits
+    padding-bottom: 70px
+    background-color: $background-color
+    &__row
+      display: flex
+      justify-content: center
+      gap: 50px
+      @media ( max-width: 1200px )
+        flex-wrap: wrap
+    &__card
+      display: flex
+      flex-direction: column
+      width: 25%
+      padding: 10px
+      font-family: $secondary-font
+      @media ( max-width: 1200px )
+        width: 40%
+      @media ( max-width: 550px )
+        width: 90%
+    &__img
+      width: 50px
+      height: 50px
+      margin: 0 auto
+      filter: $base-filter
+    &__title
+      text-align: center
+      margin-bottom: 0
+      color: $accent-color
+    &__text
+      color: $fade-accent-color
+      text-align: center
+      margin-bottom: auto
+      font-size: 15px
+
+  &-steps
+    padding: 60px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__intro
+      display: flex
+      flex-direction: column
+      justify-content: center
+    &__subtitle
+      text-align: center
+      font-size: 1.3rem
+      @media ( max-width: 945px )
+        font-size: 1.1rem
+      @media ( max-width: 767px )
+        font-size: 1rem
+    &__title
+      margin: 0
+      @media ( max-width: 945px )
+        font-size: 2.1rem
+      @media ( max-width: 767px )
+        font-size: 1.8rem
+
+    &__row
+      display: flex
+      justify-content: center
+      margin-top: 50px
+      @media ( max-width: 945px )
+        flex-wrap: wrap
+    &__card
+      width: 33%
+      display: flex
+      flex-direction: column
+      padding: 10px
+      font-family: $secondary-font
+      @media ( max-width: 1200px )
+        width: 50%
+      @media ( max-width: 550px )
+        width: 90%
+      &-block
+        width: 120px
+        height: 120px
+        background-color: #d1e4fd
+        border-radius: 50%
+        position: relative
+        margin: 0 auto
+      &-nmb
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 3rem
+        font-family: $primary-font
+        color: $accent-color
+        font-weight: 600
+      &-title
+        text-align: center
+        margin-bottom: 0
+        color: $accent-color
+      &-text
+        text-align: center
+        color: $fade-accent-color
+        margin-bottom: auto
+        padding: 0 15px
+
+  &-content
+    padding: 60px 0
+    display: flex
+    justify-content: center
+    background-color: $background-color
+  &-info
+    width: 70%
+    border-bottom: 1px solid $fade-black-color
+    @media ( max-width: 945px )
+      width: 80%
+      margin-top: 0
+    @media ( max-width: 550px )
+      width: 100%
+    &__title
+      margin: 10px 0
+      font-size: 2rem
+      @media ( max-width: 767px )
+        font-size: 1.8rem
+      @media ( max-width: 550px )
+        font-size: 1.6rem
+    &__description
+      font-size: 1.4rem
+      font-weight: 400
+      font-style: italic
+      margin-bottom: 20px
+    &__step
+      margin-bottom: 20px
+      font-family: $secondary-font
+      &-row
+        display: flex
+        justify-content: space-between
+    &__step span:first-child
+      color: $accent-color
+      font-weight: 600
+    &__step span:last-child
+      color: $accent-color

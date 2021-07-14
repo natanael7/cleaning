@@ -1,0 +1,193 @@
+.why
+
+  &-container
+    margin-top: 60px
+    display: flex
+    align-items: flex-start
+    gap: 50px
+
+  &-story
+    width: 60%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &-subtitle
+    text-transform: uppercase
+    color: $base-color
+  &-title
+    font-size: 50px
+    margin-top: 0
+    margin-bottom: 40px
+
+  &-description
+    text-align: left
+    margin-bottom: 20px
+    font-size: 20px
+    font-weight: 500
+  &-link
+    color: $accent-color
+  &-btn
+    text-transform: uppercase
+  &-image
+    width: 40%
+    &__size
+      width: 100%
+      border-radius: 100%
+
+  @media ( max-width: 1100px )
+    &-container
+      flex-direction: column-reverse
+      justify-content: center
+      align-items: center
+
+    &-story
+      width: 100%
+
+    &-image
+      width: 70%
+
+  &-wrapper
+    background-color: $background-color
+
+  &-row
+    display: flex
+    gap: 50px
+    justify-content: center
+    flex-wrap: wrap
+    margin-bottom: 30px
+    padding-bottom: 50px
+
+  &-card
+    width: 40%
+    min-height: 167px
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    padding: 20px 0
+    &__img
+      width: 100px
+      @include base-svg
+      &-size
+        width: 100%
+  &-paragraph
+    width: 60%
+    &__title
+      margin: 0
+      font-size: 1.5rem
+
+  @media ( max-width: 1100px )
+    &-card
+      min-height: 200px
+  @media ( max-width: 945px )
+    &-row
+      flex-direction: column
+      align-items: center
+    &-card
+      width: 90%
+      align-items: center
+
+      &__img
+        width: 80px
+
+    &-paragraph
+      align-self: center
+
+.importance
+  &-container
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    gap: 50px
+    padding: 100px 0
+
+  &-content
+    width: 30%
+
+    &__icon
+      width: 100%
+      border-radius: 20px
+
+  &-paragraph
+    width: 50%
+
+    &__title
+      color: $accent-color
+      font-weight: 800
+      font-size: 1.8rem
+      text-align: left
+      margin: 0
+      margin-bottom: 20px
+
+  &-row
+    display: flex
+    flex-wrap: nowrap
+    align-items: flex-start
+    gap: 1.25rem
+    margin-bottom: 1rem
+
+  &-description
+    text-align: left
+
+  &-text
+    font-size: 20px
+    font-weight: 500
+    margin-top: 30px
+
+  &-img
+    width: 18px
+    filter: $base-filter
+
+  &-wrapper
+    padding: 100px 0
+    display: flex
+    justify-content: center
+    gap: 30px
+  &-background
+    background-color: $background-color
+
+  &-block
+    width: 50%
+
+  &-research
+    text-align: left
+    margin: 0
+    margin-bottom: 10px
+    font-size: 1.8rem
+    &__text
+      margin-top: 40px
+
+  &-photo
+    width: 40%
+    &__img
+      width: 100%
+      border-radius: 20px
+
+  @media ( max-width: 1150px )
+    &-container
+      align-items: center
+
+  @media ( max-width: 945px )
+    &-container
+      flex-direction: column
+      align-items: center
+
+    &-content
+      width: 50%
+
+    &-paragraph
+      width: 100%
+
+    &-wrapper
+      flex-direction: column-reverse
+      align-items: center
+
+    &-block
+      width: 100%
+
+    &-photo
+      width: 75%
+
+  @media (max-width: 767px)
+    &-title
+      font-size: 2.1rem

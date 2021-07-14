@@ -1,0 +1,76 @@
+.footer
+  &-container
+    color: $accent-color
+    font-family: $secondary-font
+    font-size: 1rem
+    font-weight: 500
+    letter-spacing: .01em
+    line-height: 24px
+
+    padding-top: 30px
+    padding-bottom: 50px
+
+    display: flex
+    flex-direction: column
+
+    &__top,
+    &__bottom
+      display: flex
+      flex-direction: column
+      gap: 1em
+
+.module
+  &-list
+    display: flex
+    flex-direction: column
+    gap: 0.375em
+
+    &__title
+      font-weight: 600
+      font-size: 1.125em
+
+      margin-bottom: 0.75em
+
+.social
+  &-list
+    display: flex
+    gap: 1em
+
+    &__item
+      width: 100%
+      max-width: 16px
+
+    &__image
+      max-width: 1em
+      max-height: 1em
+      filter: $accent-filter
+
+@media (min-width:768px)
+  // Sticky footer from here
+  .main
+    min-height: 100vh
+    background: #fff
+    z-index: -4
+    margin-bottom: 930px
+    margin-bottom: $sticky-footer-height
+
+  .footer
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    max-height: 100vh
+    z-index: -5
+  // Sticky footer to here
+
+  .footer
+    &-container
+      gap: 1em
+      &__bottom
+        flex-direction: row
+        justify-content: flex-start
+        gap: 20%
+  .global
+    &-list
+      flex-direction: row
+      gap: 1.25em
