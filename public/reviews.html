@@ -20,6 +20,63 @@
 </head>
 
 <body>
+  <a href="tel:015037011" id="callnow">
+    <img src="/img/icons/phonefill.svg" alt="">
+  </a>
+  <div class="overlay" state="closed"></div>
+  <div class="sidecontact" state="closed">
+    <h1 class="sidecontact-title">Contact Us</h1>
+    <div class="line"></div>
+    <h2 class="sidecontact-subtitle">
+      Give us a call or fill in the form below and we will contact you. We endeavor to
+      answer all inquiries within 24 hours on
+      business days.
+    </h2>
+    <div class="sidecontact-phone-email">
+      <div class="sidecontact-button">
+        <img class="sidecontact-button__img" src="/img/icons/phone.svg" alt="">
+        <a href="tel:+12129462700" class="sidecontact-button__link">+1 212 946 2700</a>
+      </div>
+      <div class="sidecontact-button">
+        <img class="sidecontact-button__img" src="/img/icons/email.svg" alt="">
+        <a href="mailto:info@greatcleaning.ie" class="sidecontact-button__link">info@greatcleaning.ie</a>
+      </div>
+    </div>
+    <form class="sidecontact-form">
+      <input type="text" class="sidecontact-input" name="name" placeholder="Enter your name" required>
+      <input type="email" class="sidecontact-input" name="email" placeholder="Enter your email" required>
+      <input type="phone" class="sidecontact-input" name="phone" placeholder="Enter your phone" required>
+      <textarea class="sidecontact-input sidecontact-input__textarea" name="message"
+        placeholder="If you have a message for us, leave it here, otherwise let it blank"></textarea>
+      <button class="sidecontact-form__button button__base">
+        <span>
+          Submit
+        </span>
+      </button>
+      <img src="/img/icons/close.svg" alt="" class="sidecontact-close">
+    </form>
+    <div class="sidecontact-result">
+      <div class="sidecontact-loader">
+        <div class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="sidecontact-result__data sidecontact-result__success">
+        <img src="/img/icons/success.svg" alt="" class="sidecontact-result__img">
+        <h1 class="sidecontact-result__text">We have successfully sent your request, soon our team will get in touch
+          with you</h1>
+      </div>
+      <div class="sidecontact-result__data sidecontact-result__reject">
+        <img src="/img/icons/reject.svg" alt="" class="sidecontact-result__img">
+        <h1 class="sidecontact-result__text">
+          We encoutered a problem while sending the request, please try again later, or contact us via phone
+        </h1>
+      </div>
+    </div>
+  </div>
   <div class="main">
     <header class="header">
       <div class="container header-container">
