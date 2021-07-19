@@ -11,6 +11,7 @@
 'use strict';
 
 const config = require('./config');
+const sendMail = require('./email');
 const express = require('express');
 const router = express.Router();
 const stripe = require('stripe')(config.stripe.secretKey);
@@ -178,6 +179,16 @@ router.get('/payment_intents/:id/status', async (req, res) => {
   res.json({paymentIntent: payload});
 });
 
+// Send an email
+router.post('/send_email', (req, res, next) => {
+  try {
+    sendMail(req.query);
+    return res.status(200).end();
+  } catch (err) {
+    return res.status(500).json({error: err.message});
+  }
+});
+// 404 page
 router.get('*', function (req, res) {
   const fileDirectory = path.resolve(__dirname, '../public');
   res.status(404);

@@ -2,18 +2,22 @@
 <html>
 
 <head>
+  <title>Great Cleaning</title>
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="//code-eu1.jivosite.com/widget/0p8MbvGfNa" async></script>
+
   <link rel="stylesheet" href="/fonts/NeueHaasUnica/stylesheet.css">
   <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/form-questions.js" async defer></script>
+  
+  <script src="//code-eu1.jivosite.com/widget/0p8MbvGfNa" async></script>
   <script src="/js/navbar.js" async defer></script>
   <script src="/js/sticky-navbar.js" async defer></script>
   <script src="/js/contactform.js" async defer></script>
+
+  <script src="/js/form-questions.js" async defer></script>
 </head>
 
 <body>
@@ -40,9 +44,9 @@
       </div>
     </div>
     <form class="sidecontact-form">
-      <input type="text" class="sidecontact-input" name="name" placeholder="Enter your name">
-      <input type="email" class="sidecontact-input" name="email" placeholder="Enter your email">
-      <input type="phone" class="sidecontact-input" name="phone" placeholder="Enter your phone">
+      <input type="text" class="sidecontact-input" name="name" placeholder="Enter your name" required>
+      <input type="email" class="sidecontact-input" name="email" placeholder="Enter your email" required>
+      <input type="phone" class="sidecontact-input" name="phone" placeholder="Enter your phone" required>
       <textarea class="sidecontact-input sidecontact-input__textarea" name="message"
         placeholder="If you have a message for us, leave it here, otherwise let it blank"></textarea>
       <button class="sidecontact-form__button button__base">
@@ -52,6 +56,27 @@
       </button>
       <img src="/img/icons/close.svg" alt="" class="sidecontact-close">
     </form>
+    <div class="sidecontact-result">
+      <div class="sidecontact-loader">
+        <div class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="sidecontact-result__data sidecontact-result__success">
+        <img src="/img/icons/success.svg" alt="" class="sidecontact-result__img">
+        <h1 class="sidecontact-result__text">We have successfully sent your request, soon our team will get in touch
+          with you</h1>
+      </div>
+      <div class="sidecontact-result__data sidecontact-result__reject">
+        <img src="/img/icons/reject.svg" alt="" class="sidecontact-result__img">
+        <h1 class="sidecontact-result__text">
+          We encoutered a problem while sending the request, please try again later, or contact us via phone
+        </h1>
+      </div>
+    </div>
   </div>
   <div class="main">
     <header class="header">
@@ -197,11 +222,13 @@
             cleaning company offering all types of cleaning services.
           </h2>
           <div class="hero-button__container">
-            <button class="button button__base hero-button__base">
-              <span>
-                Book Now
-                <i class="hero-arrow"></i>
-              </span>
+            <a href="#form">
+              <button class="button button__base hero-button__base">
+                <span>
+                  Book Now
+                  <i class="hero-arrow"></i>
+                </span>
+            </a>
             </button>
             <button class="button button__invisible hero-button__invisible">
               <span>
@@ -698,7 +725,7 @@
     </section>
 
 
-    <section class="form">
+    <section class="form" id="form">
       <img src="/img/page/section.svg" alt="" class="section-svg">
       <div class="sidelimit">
         <div class="form-container container">

@@ -155,3 +155,43 @@
     top: 30px
     right: 30px
     cursor: pointer
+
+  &-result
+    background: white
+    top: 88px
+    right: 0
+    left: 0
+    bottom: 0
+    position: absolute
+    z-index: 1000
+    display: none
+    justify-content: center
+    align-items: center
+
+    &__data
+      padding: 30px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+    &__text
+      @include basic-text
+      font-size: 1.875rem
+      text-align: center
+    &__success
+      display: none
+      img
+        filter: invert(52%) sepia(75%) saturate(443%) hue-rotate(68deg) brightness(101%) contrast(81%)
+    &__reject
+      display: none
+      img
+        filter: invert(15%) sepia(57%) saturate(7500%) hue-rotate(0deg) brightness(98%) contrast(122%)
+    &__img
+      width: 100px
+
+  &-loader
+    display: none
+    filter: $base-filter
+
+.display
+  display: block

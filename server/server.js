@@ -5,9 +5,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
+
 const app = express();
 const publicdir = path.join(__dirname, '../public');
-// Setup useful middleware.
 app.use(
   bodyParser.json({
     // We need the raw body to verify webhook signatures.
